@@ -1,0 +1,72 @@
+/* StudentDashboard.css */
+
+.quick-action-banner {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.quick-action-banner h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.quick-action-banner p {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.quick-action-banner .btn-primary {
+  background: white;
+  color: var(--primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.quick-action-banner .btn-primary:hover {
+  background: #f0f9ff;
+}
+
+.stat-pending  .stat-value { color: var(--warning); }
+.stat-approved .stat-value { color: var(--success); }
+.stat-rejected .stat-value { color: var(--danger);  }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.subject-cell {
+  font-weight: 500;
+  color: var(--text-primary);
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.holder-chip {
+  font-size: 0.75rem;
+  background: var(--primary-light);
+  color: var(--primary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.clickable-row { cursor: pointer; }

@@ -1,0 +1,143 @@
+/* ApprovalPanel.css */
+
+.approval-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.15s;
+}
+
+.approval-panel:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.ap-header {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ap-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.ap-subject {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.ap-meta {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.2rem;
+}
+
+.ap-dates {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.ap-expand-icon {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* Body (expanded) */
+.ap-body {
+  padding: 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
+  background: #fafafa;
+}
+
+.ap-section {
+  margin-bottom: 1rem;
+}
+
+.ap-section h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.ap-letter {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-height: 240px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+.drive-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.drive-link-btn:hover { background: #dbeafe; }
+
+/* Action Zone */
+.ap-actions {
+  padding: 0.85rem 1.25rem;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.action-buttons .btn {
+  font-size: 0.82rem;
+  padding: 0.45rem 0.9rem;
+}
+
+.action-buttons .btn.selected {
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+  outline: 2px solid currentColor;
+}
+
+.remarks-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.remarks-row .form-control {
+  flex: 1;
+  font-size: 0.85rem;
+  resize: none;
+}
+
+.submit-action-btn {
+  flex-shrink: 0;
+  align-self: flex-end;
+  padding: 0.6rem 1.25rem;
+}

@@ -1,0 +1,213 @@
+/* MyPermissions.css */
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  background: white;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-tab:hover  { border-color: var(--primary); color: var(--primary); }
+.filter-tab.active { background: var(--primary); border-color: var(--primary); color: white; }
+
+.permissions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.permission-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.1s;
+  padding: 1.1rem 1.5rem;
+}
+
+.permission-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.pcard-subject {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.pcard-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.returned-notice {
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  color: #d97706;
+  font-weight: 600;
+}
+
+.pcard-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.pcard-holder {
+  font-size: 0.75rem;
+  background: var(--primary-light);
+  color: var(--primary);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.pcard-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Detail modal extras */
+.request-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+}
+
+.request-meta-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.meta-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  display: block;
+}
+
+.drive-link {
+  color: var(--primary);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.drive-link:hover { text-decoration: underline; }
+
+.letter-box {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.letter-box h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+/* Approval Timeline */
+.approval-timeline h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.timeline-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 18px;
+  bottom: -10px;
+  width: 2px;
+  background: var(--border);
+}
+
+.tl-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--border);
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.timeline-item.approved  .tl-dot { background: var(--success); border-color: var(--success); }
+.timeline-item.rejected  .tl-dot { background: var(--danger);  border-color: var(--danger);  }
+.timeline-item.forwarded .tl-dot { background: var(--primary); border-color: var(--primary); }
+.timeline-item.returned  .tl-dot { background: var(--warning); border-color: var(--warning); }
+
+.tl-action { font-size: 0.875rem; color: var(--text-primary); }
+
+.tl-type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.tl-type.approved  { background: var(--success-light); color: var(--success); }
+.tl-type.rejected  { background: var(--danger-light);  color: var(--danger);  }
+.tl-type.forwarded { background: var(--primary-light); color: var(--primary); }
+.tl-type.returned  { background: var(--warning-light); color: var(--warning); }
+.tl-type.submitted { background: #f8fafc; color: var(--text-secondary); }
+
+.tl-remarks {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  background: #f8fafc;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  margin-top: 0.3rem;
+}
+
+.tl-time {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
