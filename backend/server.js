@@ -8,6 +8,7 @@ const { testConnection } = require('./config/db');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+app.set('trust proxy', 1);
 
 // ─── Middleware ───────────────────────────────────────────────
 app.use(cors({
@@ -27,10 +28,11 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: false,           // Set true in production with HTTPS
-    httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000  // 24 hours
-  }
+  secure: process.env.NODE_ENV === 'production',
+  httpOnly: true,
+  sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+  maxAge: 24 * 60 * 60 * 1000
+}
 }));
 
 // ─── Routes ───────────────────────────────────────────────────
